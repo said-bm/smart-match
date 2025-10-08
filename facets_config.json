@@ -1,0 +1,312 @@
+{
+  "facets_schema": {
+    "core_facets": {
+      "brand": {
+        "type": "string",
+        "description": "Product brand or manufacturer",
+        "examples": ["Apple", "Samsung", "Sony", "LG", "Dell", "HP", "Lenovo"]
+      },
+      "model": {
+        "type": "string",
+        "description": "Specific product model",
+        "examples": ["iPhone 11", "Galaxy S21", "MacBook Pro", "PS5"]
+      },
+      "cat_id": {
+        "type": "string",
+        "description": "Product category identifier",
+        "examples": ["smartphones", "laptops", "tablets", "gaming_consoles", "home_appliances"]
+      },
+      "price": {
+        "type": "number",
+        "description": "Exact price value"
+      },
+      "price_ranges": {
+        "type": "object",
+        "properties": {
+          "min": {"type": "number"},
+          "max": {"type": "number"}
+        },
+        "description": "Price range filter"
+      },
+      "backbox_grade": {
+        "type": "string",
+        "description": "Product condition or grade",
+        "examples": ["new", "like_new", "excellent", "good", "fair", "refurbished"]
+      }
+    },
+    "mobile_electronics_facets": {
+      "storage": {
+        "type": "string",
+        "description": "Storage capacity",
+        "examples": ["64GB", "128GB", "256GB", "512GB", "1TB"]
+      },
+      "color": {
+        "type": "string",
+        "description": "Product color",
+        "examples": ["black", "white", "silver", "gold", "blue", "red"]
+      },
+      "screen_size": {
+        "type": "string",
+        "description": "Display screen size",
+        "examples": ["5.5 inch", "6.1 inch", "6.7 inch", "13 inch", "15 inch"]
+      },
+      "memory": {
+        "type": "string",
+        "description": "RAM memory",
+        "examples": ["4GB", "8GB", "16GB", "32GB"]
+      },
+      "processor": {
+        "type": "string",
+        "description": "Processor/chipset model",
+        "examples": ["A14 Bionic", "Snapdragon 888", "Intel i7", "M1", "M2"]
+      },
+      "processor_speed": {
+        "type": "string",
+        "description": "Processor clock speed",
+        "examples": ["2.4GHz", "3.0GHz", "3.5GHz"]
+      },
+      "network": {
+        "type": "array",
+        "items": {"type": "string"},
+        "description": "Network connectivity",
+        "examples": [["4G"], ["5G"], ["4G", "5G"]]
+      },
+      "connectivity": {
+        "type": "array",
+        "items": {"type": "string"},
+        "description": "Connectivity features",
+        "examples": [["bluetooth", "wifi", "nfc"]]
+      },
+      "camera": {
+        "type": "string",
+        "description": "Camera specifications",
+        "examples": ["12MP", "48MP", "triple camera", "dual camera"]
+      },
+      "dual_sim": {
+        "type": "boolean",
+        "description": "Dual SIM support"
+      },
+      "sim_lock": {
+        "type": "boolean",
+        "description": "SIM lock status"
+      },
+      "battery_capacity": {
+        "type": "string",
+        "description": "Battery capacity",
+        "examples": ["3000mAh", "4000mAh", "5000mAh"]
+      },
+      "os": {
+        "type": "string",
+        "description": "Operating system",
+        "examples": ["iOS", "Android", "Windows", "macOS"]
+      },
+      "touch_bar": {
+        "type": "boolean",
+        "description": "Touch bar feature (Mac)"
+      },
+      "touch_id": {
+        "type": "boolean",
+        "description": "Touch ID fingerprint sensor"
+      },
+      "face_id": {
+        "type": "boolean",
+        "description": "Face ID facial recognition"
+      },
+      "retina": {
+        "type": "boolean",
+        "description": "Retina display"
+      },
+      "keyboard_type": {
+        "type": "string",
+        "description": "Type of keyboard",
+        "examples": ["mechanical", "membrane", "magic_keyboard"]
+      },
+      "keyboard_language": {
+        "type": "string",
+        "description": "Keyboard language layout",
+        "examples": ["US", "UK", "FR", "DE", "ES"]
+      }
+    },
+    "computing_facets": {
+      "graphic_card": {
+        "type": "string",
+        "description": "Graphics card model",
+        "examples": ["NVIDIA RTX 3060", "AMD Radeon", "Intel Iris", "integrated"]
+      },
+      "processor_type": {
+        "type": "string",
+        "description": "Processor type/brand",
+        "examples": ["Intel", "AMD", "Apple Silicon", "ARM"]
+      },
+      "storage_type": {
+        "type": "string",
+        "description": "Storage type",
+        "examples": ["SSD", "HDD", "NVMe", "hybrid"]
+      },
+      "storage_ssd": {
+        "type": "string",
+        "description": "SSD storage capacity",
+        "examples": ["256GB SSD", "512GB SSD", "1TB SSD"]
+      },
+      "touchscreen": {
+        "type": "boolean",
+        "description": "Touchscreen capability"
+      },
+      "webcam": {
+        "type": "boolean",
+        "description": "Built-in webcam"
+      },
+      "hdmi_input": {
+        "type": "boolean",
+        "description": "HDMI input port"
+      },
+      "hdmi_output": {
+        "type": "boolean",
+        "description": "HDMI output port"
+      },
+      "screen_format": {
+        "type": "string",
+        "description": "Screen aspect ratio",
+        "examples": ["16:9", "16:10", "21:9", "4:3"]
+      },
+      "screen_type": {
+        "type": "string",
+        "description": "Display panel type",
+        "examples": ["IPS", "OLED", "LED", "LCD", "AMOLED"]
+      }
+    },
+    "home_appliances_facets": {
+      "coffee_machine_type": {
+        "type": "string",
+        "description": "Type of coffee machine",
+        "examples": ["espresso", "drip", "capsule", "bean_to_cup"]
+      },
+      "washing_machine_type": {
+        "type": "string",
+        "description": "Type of washing machine",
+        "examples": ["front_load", "top_load", "washer_dryer"]
+      },
+      "fridge_type": {
+        "type": "string",
+        "description": "Type of refrigerator",
+        "examples": ["french_door", "side_by_side", "top_freezer", "bottom_freezer"]
+      },
+      "energy_class": {
+        "type": "string",
+        "description": "Energy efficiency rating",
+        "examples": ["A+++", "A++", "A+", "A", "B", "C", "D"]
+      },
+      "capacity": {
+        "type": "string",
+        "description": "Appliance capacity",
+        "examples": ["7kg", "8kg", "10kg", "300L", "500L"]
+      },
+      "power": {
+        "type": "string",
+        "description": "Power consumption/output",
+        "examples": ["1200W", "1500W", "2000W"]
+      },
+      "dishwasher_type": {
+        "type": "string",
+        "description": "Type of dishwasher",
+        "examples": ["built_in", "freestanding", "compact"]
+      },
+      "oven_type": {
+        "type": "string",
+        "description": "Type of oven",
+        "examples": ["electric", "gas", "convection", "microwave"]
+      },
+      "hob_type": {
+        "type": "string",
+        "description": "Type of cooking hob",
+        "examples": ["induction", "ceramic", "gas", "electric"]
+      }
+    },
+    "gaming_facets": {
+      "console_type": {
+        "type": "string",
+        "description": "Gaming console type",
+        "examples": ["PlayStation", "Xbox", "Nintendo Switch"]
+      },
+      "compatible_gaming_console": {
+        "type": "array",
+        "items": {"type": "string"},
+        "description": "Compatible gaming platforms",
+        "examples": [["PS5", "PS4"], ["Xbox Series X", "Xbox One"]]
+      },
+      "pegi": {
+        "type": "string",
+        "description": "PEGI age rating",
+        "examples": ["3", "7", "12", "16", "18"]
+      },
+      "video_game_genre": {
+        "type": "string",
+        "description": "Video game genre",
+        "examples": ["action", "adventure", "rpg", "sports", "racing", "fps", "simulation"]
+      },
+      "controllers_number": {
+        "type": "number",
+        "description": "Number of controllers included"
+      }
+    },
+    "general_facets": {
+      "warranty": {
+        "type": "string",
+        "description": "Warranty period",
+        "examples": ["1 year", "2 years", "3 years", "manufacturer"]
+      },
+      "deals_type": {
+        "type": "string",
+        "description": "Type of deal or promotion",
+        "examples": ["clearance", "black_friday", "bundle", "flash_sale"]
+      },
+      "special_offer_type": {
+        "type": "string",
+        "description": "Special offer category",
+        "examples": ["discount", "cashback", "free_shipping", "buy_one_get_one"]
+      },
+      "year_date_release": {
+        "type": "string",
+        "description": "Release year or date",
+        "examples": ["2021", "2022", "2023", "2024"]
+      },
+      "generation": {
+        "type": "string",
+        "description": "Product generation",
+        "examples": ["Gen 1", "Gen 2", "11th Gen", "12th Gen"]
+      },
+      "vintage": {
+        "type": "boolean",
+        "description": "Vintage or retro product"
+      },
+      "limited_edition": {
+        "type": "boolean",
+        "description": "Limited edition product"
+      }
+    },
+    "technical_facets": {
+      "merchant_id": {
+        "type": "string",
+        "description": "Merchant identifier"
+      },
+      "deduplication_id": {
+        "type": "string",
+        "description": "Unique deduplication identifier"
+      },
+      "is_cheapest_listing": {
+        "type": "boolean",
+        "description": "Indicates if this is the cheapest listing"
+      },
+      "publication_state": {
+        "type": "string",
+        "description": "Publication status",
+        "examples": ["published", "draft", "pending", "archived"]
+      },
+      "backbox": {
+        "type": "boolean",
+        "description": "Backbox flag"
+      }
+    }
+  }
+}
+

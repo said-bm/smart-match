@@ -1,0 +1,65 @@
+[tool.poetry]
+name = "smart-match"
+version = "1.0.0"
+description = "Smart Match - Intelligent product matching API powered by AI"
+authors = ["Your Name <your.email@example.com>"]
+readme = "README.md"
+packages = [{include = "services"}]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.13"
+
+# Core API Framework
+fastapi = "~0.101.0"
+uvicorn = "~0.23.2"
+pydantic = "^1.10.0"
+python-multipart = "~0.0.6"
+
+# LLM and AI
+openai = "~0.27.8"
+langchain = "~0.0.252"
+tiktoken = "~0.4.0"
+langsmith = "~0.0.19"
+
+# HTTP and Async
+httpx = "~0.24.1"
+aiohttp = "~3.8.5"
+aiofiles = "~23.1.0"
+requests = "^2.31.0"
+
+# Environment and Configuration
+python-dotenv = "^1.0.0"
+
+# Data validation (already included via pydantic)
+python-dateutil = "^2.8.2"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.0.0"
+flake8 = "^6.0.0"
+pytest = "^7.0.0"
+pytest-asyncio = "^0.21.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
+target-version = ['py39']
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.venv
+  | venv
+  | build
+  | dist
+  | __pycache__
+)/
+'''
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+python_functions = "test_*"
+asyncio_mode = "auto"

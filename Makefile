@@ -98,7 +98,7 @@ start: check-env
 
 test: check-env poetry-check
 	@echo "Running API tests..."
-	poetry run python test_api.py
+	poetry run python -m pytest tests/ -v
 
 docs:
 	@echo "Opening API documentation..."
